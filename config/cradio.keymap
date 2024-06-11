@@ -23,6 +23,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
     combos {
         compatible = "zmk,combos";
 
@@ -37,46 +38,46 @@
 
         main {
             bindings = <
-&kp Q            &kp W           &kp E              &kp R             &kp T    &kp Y  &kp U              &kp I                &kp O            &kp P
-&hm LEFT_META A  &hm LEFT_ALT S  &hm RIGHT_SHIFT D  &hm LEFT_SHIFT F  &kp G    &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_META SEMICOLON
-&kp Z            &kp X           &kp C              &kp V             &kp B    &kp N  &kp M              &kp COMMA            &kp DOT          &kp FSLH
-&lt 1 SPACE      &lt 4 ESCAPE                                                                                                 &lt 3 BACKSPACE  &lt 2 ENTER
+&kp Q            &kp W           &kp E              &kp R             &kp T           &kp Y            &kp U              &kp I                &kp O            &kp P
+&hm LEFT_META A  &hm LEFT_ALT S  &hm RIGHT_SHIFT D  &hm LEFT_SHIFT F  &kp G           &kp H            &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_META SEMICOLON
+&kp Z            &kp X           &kp C              &kp V             &kp B           &kp N            &kp M              &kp COMMA            &kp DOT          &kp FSLH
+                                                    &lt 1 SPACE       &lt 4 ESCAPE    &lt 3 BACKSPACE  &lt 2 ENTER
             >;
         };
 
         nav {
             bindings = <
-&none     &none     &none      &none      &none    &none           &none           &none         &none            &none
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DOUBLE_QUOTES
-&none     &none     &none      &none      &none    &none           &none           &none         &none            &none
-&trans    &trans                                                                                 &trans           &trans
+&none     &none     &none      &none      &none     &none           &none           &none         &none            &none
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp SINGLE_QUOTE
+&none     &none     &none      &none      &none     &none           &none           &none         &none            &none
+                               &trans     &trans    &trans          &trans
             >;
         };
 
         num {
             bindings = <
-&trans     &kp N7     &kp N8  &kp N9  &trans       &trans  &trans     &trans     &trans    &trans
-&kp TAB    &kp N4     &kp N5  &kp N6  &kp EQUAL    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp GRAVE  &kp N1     &kp N2  &kp N3  &kp BSLH     &trans  &trans     &trans     &trans    &trans
-&kp N0     &kp MINUS                                                             &kp BSPC  &kp ENTER
+&trans     &kp N7  &kp N8  &kp N9  &trans       &trans    &trans     &trans     &trans    &trans
+&kp TAB    &kp N4  &kp N5  &kp N6  &kp EQUAL    &trans    &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     &trans    &trans     &trans     &trans    &trans
+                           &kp N0  &kp MINUS    &kp BSPC  &kp ENTER
             >;
         };
 
         sym {
             bindings = <
-&none          &kp AMPS   &kp STAR   &none          &none           &none  &none      &none      &none     &none
-&kp TAB        &kp DLLR   &kp PRCNT  &kp N6         &kp PLUS        &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&kp TILDE      &kp EXCL   &kp AT     &kp POUND      &kp PIPE        &none  &none      &none      &none     &none
-&trans         &kp UNDER                                                                             &trans    &trans
+&none      &kp AMPS  &kp STAR   &none      &none        &none   &none      &none      &none     &none
+&kp TAB    &kp DLLR  &kp PRCNT  &kp N6     &kp PLUS     &none   &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
+&kp TILDE  &kp EXCL  &kp AT     &kp POUND  &kp PIPE     &none   &none      &none      &none     &none
+                                &trans     &kp UNDER    &trans  &trans
             >;
         };
 
         brackets {
             bindings = <
 &trans  &trans            &trans          &trans                &trans    &trans  &trans                 &trans           &trans             &trans
-&trans  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &trans
+&trans  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES
 &trans  &trans            &trans          &trans                &trans    &trans  &trans                 &trans           &trans             &trans
-&trans  &trans                                                                                                            &trans             &trans
+                                          &trans                &trans    &trans  &trans
             >;
         };
     };
