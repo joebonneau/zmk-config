@@ -27,6 +27,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        shm: sensitive_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -43,9 +52,9 @@
 
         main {
             bindings = <
-&kp Q            &kp W           &kp E               &kp R             &kp T           &kp Y            &kp U              &kp I                &kp O            &kp P
-&hm LEFT_META A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H            &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L  &hm RIGHT_META SEMICOLON
-&kp Z            &kp X           &kp C               &kp V             &kp B           &kp N            &kp M              &kp COMMA            &kp DOT          &kp FSLH
+&kp Q             &kp W            &kp E               &kp R             &kp T           &kp Y            &kp U              &kp I                &kp O             &kp P
+&shm LEFT_META A  &shm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H            &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &shm RIGHT_ALT L  &shm RIGHT_META SEMICOLON
+&kp Z             &kp X            &kp C               &kp V             &kp B           &kp N            &kp M              &kp COMMA            &kp DOT           &kp FSLH
                                                      &lt 1 SPACE       &lt 4 ESCAPE    &lt 3 BACKSPACE  &lt 2 ENTER
             >;
         };
