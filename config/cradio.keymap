@@ -17,8 +17,31 @@
   tapping-term-ms = <150>;
 };
 
+// TODO: try putting hyper on one thumb cluster, meh on the other and remapping shortcuts if positional hold-tap doesn't cut it
+
 / {
     behaviors {
+        lpht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <4>, <5>, <6>, <7>, <12>, <13>, <14>, <15>, <20>, <21>, <22>, <23>;
+        };
+
+
+        rpht: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0>, <1>, <2>, <3>, <8>, <9>, <10>, <11>, <16>, <17>, <18>, <19>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -52,10 +75,10 @@
 
         main {
             bindings = <
-&kp Q             &kp W            &kp E               &kp R             &kp T           &kp Y            &kp U              &kp I                &kp O             &kp P
-&shm LEFT_META A  &shm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H            &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &shm RIGHT_ALT L  &shm RIGHT_META SEMICOLON
-&kp Z             &kp X            &kp C               &kp V             &kp B           &kp N            &kp M              &kp COMMA            &kp DOT           &kp FSLH
-                                                     &lt 1 SPACE       &lt 4 ESCAPE    &lt 3 BACKSPACE  &lt 2 ENTER
+&kp Q              &kp W            &kp E               &kp R             &kp T           &kp Y            &kp U              &kp I                &kp O             &kp P
+&lpht LEFT_META A  &shm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H            &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &shm RIGHT_ALT L  &rpht RIGHT_META SEMICOLON
+&kp Z              &kp X            &kp C               &kp V             &kp B           &kp N            &kp M              &kp COMMA            &kp DOT           &kp FSLH
+                                                        &lt 1 SPACE       &lt 4 ESCAPE    &lt 3 BACKSPACE  &lt 2 ENTER
             >;
         };
 
