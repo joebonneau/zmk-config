@@ -21,7 +21,7 @@
 
 / {
     behaviors {
-        lpht: positional_hold_tap {
+        lpht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -32,7 +32,7 @@
         };
 
 
-        rpht: positional_hold_tap {
+        rpht: right_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
