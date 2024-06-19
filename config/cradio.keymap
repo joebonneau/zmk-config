@@ -81,17 +81,19 @@
       bindings = <&caps_word>;
       key-positions = <13 16>;
     };
-
     combo_sticky_shift_left {
-      bindings = <&sk LSHIFT>
-      key-positions = <30 31>
+      bindings = <&sk LSHIFT>;
+      key-positions = <30 31>;
     };
-
-
     combo_sticky_shift_right {
-      bindings = <&sk RSHIFT>
-      key-positions = <31 32>
+      bindings = <&sk RSHIFT>;
+      key-positions = <32 33>;
     };
+    combo_sticky_shift_first_thumb_keys {
+      bindings = <&sk LSHIFT>;
+      key-positions = <30 33>;
+    };
+
   };
   keymap {
     compatible = "zmk,keymap";
