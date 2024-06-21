@@ -13,7 +13,7 @@
 
 &sk {
   quick-release;
-}
+};
 
 / {
   behaviors {
