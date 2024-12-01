@@ -93,7 +93,30 @@
       bindings = <&sk LSHIFT>;
       key-positions = <30 33>;
     };
-
+    combo_left_paren {
+      bindings = <LEFT_PARENTHESIS>;
+      key-positions = <3 13>;
+    };
+    combo_left_bracket {
+      bindings = <LEFT_BRACKET>;
+      key-positions = <2 12>;
+    };
+    combo_left_brace {
+      bindings = <LEFT_BRACE>;
+      key-positions = <1 11>;
+    };
+    combo_right_paren {
+      bindings = <RIGHT_PARENTHESIS>;
+      key-positions = <6 16>;
+    };
+    combo_right_bracket {
+      bindings = <RIGHT_BRACKET>;
+      key-positions = <7 17>;
+    };
+    combo_right_brace {
+      bindings = <RIGHT_BRACE>;
+      key-positions = <8 18>;
+    };
   };
   keymap {
     compatible = "zmk,keymap";
